@@ -62,34 +62,34 @@ PC
 - New class which is inherited is called as derived class.
 - There are different types of inheritance in c++.
   - Single inheritance - A single base class is used to derive another class.
-    ```mermaid
+    ```mermaid!
         graph TD;
         A[Base class] -->B[Derived Class];
     ```
     - Example - `eg_singleInhrtnc.cpp`
   - Multiple inheritance - A derived class with more than one base class.
-    ```mermaid
+    ```mermaid!
         graph TD
         A[Base class] -->B[Derived Class]
         C[Base class] -->B[Derived Class]
         D[Base class] -->B[Derived Class]
     ```
   - Hierarchial inheritance - Several derived class from single base class.
-    ```mermaid
+    ```mermaid!
         graph TD
         A[Base class] -->B[Derived Class]
         A[Base class] -->C[Derived Class]
         A[Base class] -->D[Derived Class]
     ```
   - Multi-level inheritance - Deriving a class from already derived class.
-    ```mermaid
+    ```mermaid!
         graph TD
         A[Base class] -->B[Derived Class]
         B[A Derived Class] -->C[B Derived Class]
         C[B Derived Class] -->D[C Derived Class]
     ```
   - Hybrid inheritance - It is a combination of multiple and multilevel inheritance.A class is derived from two classes as in multiple inheritance. However, one of the parent classes is not a base class.
-    ```mermaid
+    ```mermaid!
         graph TD
         A[A Base class] -->B[B Derived Class]
         B[B Derived Class] -->E[E Derived Class]
@@ -143,7 +143,7 @@ PC
 ### Virtual Base class
 
 * When multiple classes are derived from a base class and further, another class is derived from the previously derived classes then there can be a possibility of duplication and ambiguity that can arise because of the presence of base class elements in the derived classes.
-  ```mermaid
+  ```mermaid!
   graph TD
     A[Base class] -->B[Derived Class]
     A[Base class] -->C[Derived Class]
@@ -216,7 +216,7 @@ PC
 * `poly` means many and `morphism` means forms.
 * one name multiple forms.
 * function overloading is an example of polymorphism.
-  ```mermaid
+  ```mermaid!
   graph TD
     A[Polymorphism] -->B[compile time pm]
     A[Polymorphism] -->C[Run time pm]
