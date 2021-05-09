@@ -236,3 +236,96 @@ PC
 * Virtual functions can be a friend of another class.
 * It is not compulsory that virtual function of a base class should be used.
 * If a virtual function is defined in a base class there is no compulsion that it should also be redefined in the derived class.
+
+###### Abstract base class and pure virtual functions
+
+* When a base class is defined only on a sole purpose to create derived classes out of it then this base class is called as abstract base class.
+*  `virtual void anything()=0;` is referred as do-nothing function and such a function inside a base class is called as pure virtual function.
+*  An abstract base class should compulsorily have virtual functions such that the derived classes can implement their respective virtual function.
+
+###### File I/O
+
+* `File` - Its a pattern of data that is stored on a disk.
+* A file can be accessed by a program using input and output stream.
+* The useful classes for working with files in c++ are:
+  * `fstreambase`
+  * `ifstream`
+  * `ofstream`
+* A file can be opened in two ways:
+  * Using the constructor
+  * Using the member function open() of the class.
+
+###### Templates
+
+* As class is for an object, template is for a class.
+* Code reusability is termed as dry(Do not repeat yourself) principle.
+* Templates are also called as parameterized classes.
+* Syntax:
+  ```
+  template<class T>
+  class yourDesiredName{
+    T variableName;
+    T functionName(anything)();
+  }
+  ```
+* Syntax for multiple parameters:
+  ```
+  template<class T1, class T2>
+  class yourDesiredName{
+    T1 variableName;
+    T2 variableName;
+    T functionName(anything)();
+  }
+  ```
+* In T1 or T2 any type specifier can be passed like int, char, float etc..
+* syntax for templates with default parameters:
+  ```
+  template <class T1 = int, T2 = float>
+  ```
+  In this case if a type is not specified then the default type will be assigned to the variable.
+* syntax for function templates:
+  ```
+  template <class T1, class T2>
+  T1 func1(T1 a, T2 b){
+    return a+b;
+  }
+  ```
+* Exact match of a function takes priority in function overloading with or without templates.
+
+###### STL
+
+* Standard template library. It consists of generic classes and functions.
+* Components of STL:
+  * Containers
+    * Stores data and uses template classes
+    * There are three types of containers
+      * `Sequence containers`: They store data in linear.
+        * Vector
+          * Random access is fast
+          * insertion, deletion is slow in middle.
+          * insertion, deletion at the end is fast.
+        * list
+          * Random access is slow
+          * insertion in the middle is fast
+          * at the end is also fast.
+        * dequeue
+      * `Associative containers`: Direct access using map and multimap concepts.
+        * set/multiset
+        * map/multimap
+        * Maps are used to map identifier and value like json.
+      * `Derived containers`:
+        * Real world modelling
+        * stack - lifo
+        * queue - fifo
+        * priority queue
+  * Algorithms
+    * search, sort, etc...
+  * Iterators
+    * object that points to an element in a container.
+    * Handled just like pointers.
+    * Connects algorithms with containers.
+
+###### Function objects
+
+* Function wrapped in class so that it is available like an object.
+* It is also called as functor.
